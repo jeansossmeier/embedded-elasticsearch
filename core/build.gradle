@@ -17,13 +17,6 @@ project.group = 'pl.allegro.tech'
 project.version = '3.0.0'
 jar.baseName = 'embedded-elasticsearch'
 
-// fat jar config
-jar {
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
-}
-
 dependencies {
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
     compile group: 'commons-io', name: 'commons-io', version: '2.5'
